@@ -1,9 +1,6 @@
-// Prevent animation on load
 setTimeout(() => {
   document.body.classList.remove("preload");
 }, 500);
-
-// DOM
 const btnRules = document.querySelector(".rules-btn");
 const btnClose = document.querySelector(".close-btn");
 const modalRules = document.querySelector(".modal");
@@ -99,8 +96,6 @@ function keepScore(point) {
   score += point;
   scoreNumber.innerText = score;
 }
-
-// Play Again
 playAgainBtn.addEventListener("click", () => {
   gameDiv.classList.toggle("hidden");
   resultsDiv.classList.toggle("hidden");
@@ -114,8 +109,6 @@ playAgainBtn.addEventListener("click", () => {
   resultWinner.classList.toggle("hidden");
   resultsDiv.classList.toggle("show-winner");
 });
-
-// Show/Hide Rules
 btnRules.addEventListener("click", () => {
   modalRules.classList.toggle("show-modal");
 });
